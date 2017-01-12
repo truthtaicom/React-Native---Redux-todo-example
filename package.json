@@ -1,0 +1,42 @@
+{
+	"name": "todo",
+	"version": "0.0.1",
+	"private": true,
+	"scripts": {
+		"start": "node node_modules/react-native/local-cli/cli.js start",
+		"test": "jest",
+		"ios": "json-server --watch todos.json & react-native run-ios",
+		"android": "json-server --watch todos.json & react-native run-android",
+		"lint": "eslint ./mobile ./app ",
+		"lint:fix": "npm run lint -- --fix"
+	},
+	"dependencies": {
+		"babel-eslint": "^7.1.1",
+		"eslint": "^3.7.1",
+		"eslint-config-airbnb": "^12.0.0",
+		"eslint-plugin-babel": "^3.3.0",
+		"eslint-plugin-import": "^2.0.1",
+		"eslint-plugin-jsx-a11y": "^2.2.3",
+		"eslint-plugin-promise": "^3.0.0",
+		"eslint-plugin-react": "^6.4.1",
+		"react": "~15.4.0-rc.4",
+		"react-native": "0.40.0",
+		"react-redux": "^5.0.1",
+		"redux": "^3.6.0",
+		"redux-immutable-state-invariant": "^1.2.4",
+		"redux-observable": "^0.12.2",
+		"remote-redux-devtools": "^0.5.7",
+		"reselect": "^2.5.4",
+		"rxjs": "^5.0.3",
+		"uid": "^0.0.2"
+	},
+	"devDependencies": {
+		"babel-jest": "18.0.0",
+		"babel-preset-react-native": "1.9.1",
+		"jest": "18.1.0",
+		"react-test-renderer": "~15.4.0-rc.4"
+	},
+	"jest": {
+		"preset": "react-native"
+	}
+}
