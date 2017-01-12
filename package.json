@@ -5,8 +5,6 @@
 	"scripts": {
 		"start": "node node_modules/react-native/local-cli/cli.js start",
 		"test": "jest",
-		"ios": "json-server --watch todos.json & react-native run-ios",
-		"android": "json-server --watch todos.json & react-native run-android",
 		"lint": "eslint ./mobile ./app ",
 		"lint:fix": "npm run lint -- --fix"
 	},
@@ -24,9 +22,7 @@
 		"react-redux": "^5.0.1",
 		"redux": "^3.6.0",
 		"redux-immutable-state-invariant": "^1.2.4",
-		"redux-observable": "^0.12.2",
 		"remote-redux-devtools": "^0.5.7",
-		"reselect": "^2.5.4",
 		"rxjs": "^5.0.3",
 		"uid": "^0.0.2"
 	},
