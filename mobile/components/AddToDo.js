@@ -22,10 +22,7 @@ export default class extends PureComponent {
   inputTodo = todo => this.setState({ todo })
 
   addNewTodo = () => {
-    this.props.addTodo({
-      name: this.state.todo,
-      completed: false,
-    });
+    this.props.addTodo(this.state.todo);
     this.setState({
       todo: '',
     });
@@ -41,6 +38,7 @@ export default class extends PureComponent {
       <TouchableHighlight
         onPress={this.addNewTodo}
         style={styles.button}
+        underlayColor={'#F26989'}
       >
         <Text> Add todo </Text>
       </TouchableHighlight>

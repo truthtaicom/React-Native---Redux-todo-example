@@ -12,10 +12,15 @@ export const styles = StyleSheet.create({
   input: {
     height: 40,
     width: 250,
+    paddingLeft: 10,
+    borderRadius: 4,
+    borderWidth: 0.5,
+    borderColor: 'blue',
   },
   button: {
     height: 40,
     width: 250,
+    marginTop: 10,
     borderRadius: 4,
     borderWidth: 0.5,
     borderColor: '#F26969',
@@ -25,6 +30,29 @@ export const styles = StyleSheet.create({
   },
   navBar: {
     width: 250,
+    marginTop: 10,
+    alignItems: 'center',
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+  },
+  navBarButton: {
+    width: 80,
+    height: 40,
+    borderRadius: 4,
+    borderWidth: 0.5,
+    borderColor: '#F26969',
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  navBarButtonActive: {
+    width: 80,
+    height: 40,
+    borderRadius: 4,
+    borderWidth: 0.5,
+    borderColor: '#F26969',
+    alignItems: 'center',
+    justifyContent: 'center',
+    backgroundColor: 'green',
   },
   listItem: {
     borderRadius: 4,
@@ -35,5 +63,15 @@ export const styles = StyleSheet.create({
     width: 250,
     alignItems: 'center',
     justifyContent: 'center',
+  },
+  error: {
+    flex: 1,
+    backgroundColor: 'red',
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  errorText: {
+    fontSize: 25,
+    color: 'white',
   },
 });

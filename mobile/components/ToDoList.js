@@ -33,7 +33,6 @@ export default class extends PureComponent {
       >
         <Text> {single.name} - {(single.completed) ? 'completed' : 'active'} </Text>
       </TouchableHighlight>));
-
     return (<View>
       {todosList}
     </View>);

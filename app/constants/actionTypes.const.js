@@ -6,11 +6,6 @@ export const TODO = {
 };
 
 export const ERROR = {
-  setDB: 'errorSettingDataBase',
-  getDB: 'errorGettingDataBase',
-};
-
-export const DATA = {
-  start: 'startSendingData',
-  end: 'endSendingData',
+  empty: 'emptyTodo',
+  remove: 'removeError',
 };

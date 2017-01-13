@@ -1,17 +1,13 @@
-import React, { PureComponent, PropTypes } from 'react';
+import React, { PureComponent } from 'react';
 import { View } from 'react-native';
 import AddToDoContainer from '../containers/AddToDoContainer';
 import ToDoListContainer from '../containers/ToDoListContainer';
+import FooterContainer from '../containers/FooterContainer';
 import NavBar from './NavBar';
 import { styles } from '../styles/main';
 
 export default class extends PureComponent {
   static displayName = 'Root'
-
-  static propTypes = {
-    error: PropTypes.string,
-    message: PropTypes.string,
-  }
 
   state = {
     filter: 'all',
@@ -24,8 +20,9 @@ export default class extends PureComponent {
 
     return (<View style={styles.container}>
       <AddToDoContainer />
-      <NavBar changeVisible={this.changeVisible} visible={filter} />
+      <NavBar changeVisible={this.changeVisible} filter={filter} />
       <ToDoListContainer filter={filter} />
+      <FooterContainer />
     </View>);
   }
 }

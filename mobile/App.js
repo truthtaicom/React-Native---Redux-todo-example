@@ -1,7 +1,7 @@
 import React, { PureComponent } from 'react';
 import { Provider } from 'react-redux';
 import configStore from '../app/store';
-import RootContainer from './containers/RootContainer';
+import Root from './components/Root';
 
 const store = configStore();
 
@@ -12,7 +12,7 @@ export default class extends PureComponent {
 
   render() {
     return (<Provider store={store}>
-      <RootContainer />
+      <Root />
     </Provider>);
   }
 }

@@ -6,7 +6,7 @@ import ToDoList from '../components/ToDoList';
 const getVisibleTodos = (todos, filter) => {
   if (filter === 'all') return todos;
 
-  let visibleTodos = [];
+  const visibleTodos = [];
   todos.forEach((single) => {
     if (filter === 'completed' && single.completed) visibleTodos.push(single);
     if (filter === 'active' && !single.completed) visibleTodos.push(single);

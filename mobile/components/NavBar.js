@@ -1,26 +1,42 @@
 import React, { PureComponent, PropTypes } from 'react';
-import { Text, Picker } from 'react-native';
+import { Text, View, TouchableHighlight } from 'react-native';
 import { styles } from '../styles/main';
 
 export default class extends PureComponent {
   static displayName = 'NavBar'
 
   static propTypes = {
-    visible: PropTypes.string,
+    filter: PropTypes.string,
     changeVisible: PropTypes.func,
   }
 
-  changeVisible = name => this.props.changeVisible(name)
+  changeVisible = filter => this.props.changeVisible(filter)
 
   render() {
-    return (<Picker
-      selectedValue={this.props.visible}
-      onValueChange={this.changeVisible}
-      style={styles.navBar}
-    >
-      <Picker.Item label="All" value="all" />
-      <Picker.Item label="Completed" value="completed" />
-      <Picker.Item label="Active" value="active" />
-    </Picker>);
+    const { filter } = this.props;
+
+    return (<View style={styles.navBar}>
+      <TouchableHighlight
+        onPress={() => { this.changeVisible('all'); }}
+        style={(filter === 'all') ? styles.navBarButtonActive : styles.navBarButton}
+        underlayColor={'#F26969'}
+      >
+        <Text> All </Text>
+      </TouchableHighlight>
+      <TouchableHighlight
+        onPress={() => { this.changeVisible('completed'); }}
+        style={(filter === 'completed') ? styles.navBarButtonActive : styles.navBarButton}
+        underlayColor={'#F26969'}
+      >
+        <Text> Completed </Text>
+      </TouchableHighlight>
+      <TouchableHighlight
+        onPress={() => { this.changeVisible('active'); }}
+        style={(filter === 'active') ? styles.navBarButtonActive : styles.navBarButton}
+        underlayColor={'#F26969'}
+      >
+        <Text> Active </Text>
+      </TouchableHighlight>
+    </View>);
   }
 }

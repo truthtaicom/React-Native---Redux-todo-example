@@ -25,8 +25,6 @@ export default function (state = [], action) {
         ...state,
         action.payload,
       ];
-    case TODO.restore:
-      return action.payload;
     case TODO.toggle:
       return toggleTodo(state, action.payload);
     default:
