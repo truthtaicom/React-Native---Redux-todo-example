@@ -14,7 +14,8 @@ Code for mobile, such as containers and components, is in 'mobile' folder.
 [react-router@3.0.1](https://github.com/ReactTraining/react-router) is used for navigating between todos. Code for web app is in 'web' folder.
 
 ## Instalation 
-App is built with yarn, but you can run it with npm.
+App is built with yarn, but you can run it with npm:
+
 1. Clone repository
 2. ``` yarn ``` or ``` npm install ``` to build project
 3. ``` yarn run ios ``` to run ios app
