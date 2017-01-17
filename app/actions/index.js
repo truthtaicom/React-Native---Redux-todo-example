@@ -1,5 +1,9 @@
 import { TODO, ERROR } from '../constants/actionTypes.const';
 
+const s4 = () => Math.floor((1 + Math.random()) * 0x10000).toString(16).substring(1);
+
+const guid = () => `${s4()}${s4()}-${s4()}-${s4()}-${s4()}-${s4()}${s4()}${s4()}`;
+
 export const addTodo = (todo) => {
   if (todo === '') {
     return {
@@ -12,6 +16,7 @@ export const addTodo = (todo) => {
     payload: {
       name: todo,
       completed: false,
+      uid: guid(),
     },
   };
 };

@@ -13,7 +13,8 @@ export default class extends PureComponent {
     todos: PropTypes.arrayOf(
       PropTypes.shape({
         name: PropTypes.string, // eslint-disable-line
-        completed: PropTypes.bool // eslint-disable-line
+        completed: PropTypes.bool, // eslint-disable-line
+        uid: PropTypes.string, // eslint-disable-line
       })
     ),
     toggleTodo: PropTypes.func, // eslint-disable-line

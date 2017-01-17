@@ -3,7 +3,7 @@ import { TODO } from '../constants/actionTypes.const';
 const toggleTodo = (state, todo) => {
   const newState = [];
   state.forEach((single) => {
-    if (single.name === todo.name) {
+    if (single.uid === todo.uid) {
       newState.push({
         ...single,
         completed: !todo.completed,
