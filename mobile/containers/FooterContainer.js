@@ -1,5 +1,5 @@
 import { connect } from 'react-redux';
-import { removeError } from '../../app/actions/actions';
+import { removeError } from '../../app/actions';
 
 import Footer from '../components/Footer';
 
